@@ -71,7 +71,7 @@
     <section id="contact" class="section">
       <h2>Contact</h2>
       <!-- Netlify-ready form with honeypot -->
-      <form name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="form">
+      <form name="contact" method="POST" action="success.html" data-netlify="true" netlify-honeypot="bot-field" class="form">
         <!-- Honeypot field (hidden) -->
         <p class="hidden">
           <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -102,6 +102,14 @@
     <small>© <span id="year"></span> Josh Posso. All rights reserved.</small>
   </footer>
 
+  <!-- Hidden fallback form for Netlify build detection -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+
   <script src="script.js"></script>
 </body>
 </html>
+
