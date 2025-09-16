@@ -1,0 +1,33 @@
+:root{
+  --bg:#0b0c10; --panel:#111217; --text:#e7e9ee; --muted:#a7abb4;
+  --accent:#7c5cff; --border:#242633;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:var(--text);text-decoration:none}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.header{padding-top:48px;padding-bottom:24px}
+.brand{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.logo{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--panel);border:1px solid var(--border);font-weight:800}
+nav a{margin-left:16px;color:var(--muted)}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:8px 0 8px}
+h2{font-size:22px;margin:0 0 12px}
+.sub{color:var(--muted);max-width:60ch}
+.accent{color:var(--accent)}
+.cta{margin-top:16px}
+.btn{display:inline-block;padding:10px 16px;border-radius:12px;border:1px solid var(--border);background:var(--panel)}
+.btn.primary{background:var(--accent);color:white;border-color:transparent}
+.section{margin:40px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--border);padding:16px;border-radius:16px}
+.card h3{margin:0 0 8px}
+.card-actions a{margin-right:12px;color:var(--muted);font-weight:600}
+.list{padding-left:18px}
+.price-note{color:var(--muted)}
+.form{display:grid;gap:12px;max-width:520px}
+input,textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#0e0f14;color:var(--text)}
+footer{color:var(--muted);padding-bottom:40px}
+.muted{color:var(--muted)}
+@media (hover:hover){
+  .card:hover{transform:translateY(-2px);transition:150ms;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+}
