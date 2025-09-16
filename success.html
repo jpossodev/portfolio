@@ -3,12 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thanks!</title>
+  <title>Thanks! — Josh Posso</title>
+  <meta name="description" content="Thanks for your message — I'll get back to you shortly.">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .thanks-wrap{
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .thanks-card{
+      max-width: 720px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .thanks-emoji{font-size: 44px; line-height: 1; margin-bottom: 8px}
+    .thanks-title{font-size: clamp(22px, 4vw, 32px); margin: 6px 0 8px}
+    .thanks-sub{color: var(--muted); margin: 0 auto 16px; max-width: 60ch}
+    .actions{display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px}
+  </style>
 </head>
-<body class="container">
-  <h1>✅ Thanks for reaching out!</h1>
-  <p>I’ll reply from <strong>jposso.dev@gmail.com</strong> soon.</p>
-  <p><a class="btn primary" href="/">← Back to home</a></p>
+<body>
+  <main class="thanks-wrap">
+    <section class="thanks-card">
+      <div class="thanks-emoji">✅</div>
+      <h1 class="thanks-title">Thanks for reaching out!</h1>
+      <p class="thanks-sub">
+        I got your message and I’ll reply from <strong>jposso.dev@gmail.com</strong> soon.
+        If it’s urgent, feel free to email me directly.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="/">← Back to home</a>
+        <a class="btn" href="mailto:jposso.dev@gmail.com">Email me</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
